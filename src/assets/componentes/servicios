@@ -1,0 +1,74 @@
+const API_URL = 'http://localhost:3300'
+
+//Exportar nuestras funciones
+
+
+export async function clientes(){
+    try{
+        const response = await fetch(`${API_URL}/Clientes`);
+        const data = await response.json();
+        return data;
+}   catch (error){
+    console.log('Nuestro error es',error);
+}
+}
+
+//Funcion que trae datos
+export async function getClientes(){
+    // const token = JSON.parse(localStorage.getItem('token'));
+    
+    const requestOptions = {
+        headers: {
+          'Content-Type': 'application/json',
+        //   Authorization: `Bearer ${token}`,
+        },
+      };
+      
+    try{
+        const response = await fetch(`${API_URL}/clientes`, requestOptions);
+        const data = await response.json();
+        return data;
+    }catch(error){
+        console.log('Nuestro error', error);
+    }
+}
+
+// Baja y alta
+
+export async function BajaCliente(idClientes){
+    const requestOptions={
+        method: 'PUT',
+        headers: {
+            'Content-Type': 'application/json',
+
+        }
+    };
+    try{
+        const response = await fetch(`${API_URL}/bajaclientes/${idClientes}`, requestOptions)
+        const data = await response.json();
+        console.log(data)
+        return data;
+    } catch(e){
+
+        alert('No se puede conectar con el servidor')
+    }
+}
+
+export async function AltaCliente(idClientes){
+    const requestOptions={
+        method: 'PUT',
+        headers: {
+            'Content-Type': 'application/json'
+        }
+    };
+    try{
+        const response = await fetch(`${API_URL}/altaclientes/${idClientes}`, requestOptions)
+        const data = await response.json();
+        // console.log(data)
+        return data;
+    } catch(e){
+
+        alert('No se puede conectar con el servidor')
+    }
+}
+
