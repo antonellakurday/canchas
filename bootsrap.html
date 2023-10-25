@@ -1,94 +1,125 @@
 <!doctype html>
-<html lang="en">
+<html lang="es">
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Bootstrap demo</title>
+    <title>proyecto frontend</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
   </head>
   <body>
-    import React from 'react';
-
-
-
     
-                <!-- Logo en la esquina superior derecha -->
-                <div class="logo-container text-right mt-4 mr-4" style="margin-right: 450px;">
-                    <img src="img/tu_cancha_log.png" alt="Tu Cancha Logo" height="250">
-                </div>
-
     
+    <header
+    class="container text-center my-5">
+       <h1 class="title-box">Bienvenido a Tu cancha Posadas</h1>
+     </header>
 
-
-    <!-- Incluir Bootstrap CSS -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <style>
+        /* Estilos de fondo personalizados con una imagen */
         body {
-            background-color: #001f3f; /* Azul marino */
-            color: #ffffff; /* Blanco */
+          background:url('../canchas/img/fondo2.jpg') center center no-repeat;
+          background-size: cover;
+          color: #e6d5d5;
         }
-        .navbar-light .navbar-nav .nav-link {
-            color: #ffffff; /* Blanco */
-        }
-        .navbar-light .navbar-toggler-icon {
-            background-color: #ffffff; /* Blanco */
-        }
-        .carousel {
-            margin-top: 100px; /* Espacio superior para centrar el carrusel */
-        }
-    </style>
-</head>
-<body>
+        .title-box{
+        background-color:#010e14;
+        display: inline;
+        border-radius:10px;
+        padding:5px 10px;
+    }
 
 
- <!-- Contenido principal -->
- <div class="container mt-0">
-    <h1>Bienvenido a Tu Cancha Posadas</h1>
-    <p>Reserva tu cancha de basquet, voley o padle con nosotros.</p>
-</div>
-</head>
-<body>
-    <div class="container">
-        <div class="row">
-           
+    .container {
+  margin-top: 300px; /* baja las cards de las canchas */
+}
+        h1, h2 {
+          color: #fff;
+          text-align: left;
+          margin-top: 200px;
+        }
+      </style>
+    </head>
+    <body>
 
- <!-- Botones "Registrarte" y "Reserva tu cancha" -->
-<div class="container mt-3 text-left">
-    <a href="#" class="btn btn-primary mx-2">Registrarte</a>
-    <a href="#" class="btn btn-success mx-2">Reserva tu cancha</a>
-</div>
-</a>
-</nav>
-
-<div class="container mt-4">
-    <!-- Carrusel de imágenes -->
-    <div id="imageCarousel" class="carousel slide" data-ride="carousel">
-        <ol class="carousel-indicators">
-            <li data-target="#imageCarousel" data-slide-to="0" class="active"></li>
-            <li data-target="#imageCarousel" data-slide-to="1"></li>
-            <li data-target="#imageCarousel" data-slide-to="2"></li>
-        </ol>
-        <div class="carousel-inner">
-            <div class="carousel-item active">
-                <img src="img/cancha_basquett.jpg" class="d-block w-100" alt="Cancha de Basquet" style="max-width: 60%; max-height: 60%;">
-            </div>
-            <div class="carousel-item">
-                <img src="img/cancha_voley.jpg" class="d-block w-100" alt="Cancha de Voley" style="max-width: 60%; max-height: 60%;">
-            </div>
-            <div class="carousel-item">
-                <img src="img/cancha_padel.jpg" class="d-block w-100" alt="Cancha de Pádel" style="max-width: 60%; max-height: 60%;">
-            </div>
         
-         
-        </div>
-        </a>
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+    <a class="navbar-brand" href="#">Inicio</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav ml-auto"> <!-- Alinea las opciones a la derecha -->
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            Servicios
+          </a>
+          <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+            <a class="dropdown-item" href="#">Descarga la App</a>
+            <a class="dropdown-item" href="#">Reserva tu turno</a>
+            <a class="dropdown-item" href="#">Informacion de contacto</a>
+          </div>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Registrarse</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Iniciar Sesión</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Eventos</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Métodos de Pago</a>
+        </li>
+      </ul>
     </div>
-</div>
+  </nav>
+    
+    <header class="container text-left my-5">
+      <h2 class="title-box"]>Alquiler de Canchas</h1>
+    </header>
+    
 
-
-
-    <!-- Incluir Bootstrap JS y jQuery (Asegúrate de tener jQuery instalado) -->
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.2/dist/js/bootstrap.min.js"></script>
-</body>
-</html>
+<div class="container">
+  <section>
+    <h2 class="text-left">Canchas Disponibles</h2> 
+    <div class="row">
+            <div class="col-md-4">
+              <div class="card">
+                <alt="Cancha de Pádel class="card-img-top">
+                <div class="card-body">
+                  <h3 class="card-title">Cancha de Pádel</h3>
+                  <p class="card-text">Reserva tu cancha de pádel aca.</p>
+                  <a href="#" class="btn btn-primary">Reservar</a>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-4">
+              <div class="card">
+                <alt="Cancha de Basquet class="card-img-top">
+                <div class="card-body">
+                  <h3 class="card-title">Cancha de Basquet</h3>
+                  <p class="card-text">Disfruta de partidos de baloncesto en nuestras canchas.</p>
+                  <a href="#" class="btn btn-primary">Reservar</a>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-4">
+              <div class="card">
+                <alt="Cancha de Voley class="card-img-top">
+                <div class="card-body">
+                  <h3 class="card-title">Cancha de Voley</h3>
+                  <p class="card-text">Organiza torneos de voleibol en nuestras canchas.</p>
+                  <a href="#" class="btn btn-primary">Reservar</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+      </div>
+      
+      <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+      <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
+      <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+      </body>
+      </html>
